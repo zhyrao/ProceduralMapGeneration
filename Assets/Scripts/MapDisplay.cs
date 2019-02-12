@@ -22,9 +22,11 @@ public class MapDisplay : MonoBehaviour {
             }
         }
 
+        // set color value
         texture.SetPixels(colorMap);
         texture.Apply();
 
+        // apply to material and resize plane
         textureRenderer.sharedMaterial.mainTexture = texture;
         textureRenderer.transform.localScale = new Vector3(width, 1, height);
     }
